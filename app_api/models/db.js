@@ -7,21 +7,28 @@ var dbURI = config.mongoUrl;
 if (config.mongoUrl=== 'production') {
     dbURI = config.mongoUrl;
 }
-
+// Connect to MongoDB
+mongoose
+  .connect(
+    dbURI,
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log("MongoDB successfully connected"))
+  .catch(err => console.log(err));
 //This overrides the error messages you get if you do not state promise
-mongoose.Promise = global.Promise;
-mongoose.connect(dbURI);
+// mongoose.Promise = global.Promise;
+// mongoose.connect(dbURI);
 
-// Types of connection events
-mongoose.connection.on('connected', function() {
-    console.log('Mongoose connected to ' + dbURI);
-});
-mongoose.connection.on('error', function(err) {
-    console.log('Mongoose connection error: ' + err);
-});
-mongoose.connection.on('disconnected', function() {
-    console.log('Mongoose disconnected');
-});
+// // Types of connection events
+// mongoose.connection.on('connected', function() {
+//     console.log('Mongoose connected to ' + dbURI);
+// });
+// mongoose.connection.on('error', function(err) {
+//     console.log('Mongoose connection error: ' + err);
+// });
+// mongoose.connection.on('disconnected', function() {
+//     console.log('Mongoose disconnected');
+// });
 
 // App termination and app restart
 // To be called when process is restarted or terminated
