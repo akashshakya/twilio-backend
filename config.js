@@ -11,18 +11,18 @@ cfg.secret = 'lalalalala';
 // Your Twilio account SID and auth token, both found at:
 // https://www.twilio.com/user/account
 // cfg.accountSid = process.env.TWILIO_ACCOUNT_SID;
-cfg.accountSid = "ACdc262493a78cf74063c959700ea5cb45";
+cfg.accountSid = "ACaf43a2a4042c9e4c51984fa018186db8";
 // cfg.authToken = process.env.TWILIO_AUTH_TOKEN;
-cfg.authToken = "27e8dbb359728001e83fc59bbc09ad72";
+cfg.authToken = "06ed5537df16450290fea7d56124672c";
 
 // A Twilio number you control
 // Specify, e.g. "+16519998877"
 // cfg.twilioNumber = process.env.TWILIO_NUMBER;
-cfg.twilioNumber = "+919713491364";
+cfg.twilioNumber = "+918319165035";
 
 // Your Authy production key
 // cfg.authyKey = process.env.AUTHY_API_KEY;
-cfg.authyKey = "zmqeL1YWFd6AqthB6ZhUFnf4TIaLjrvL";
+cfg.authyKey = "hQ3CDnKw3oSW9rd0bj4RqCqi2tnRDEwX";
 
 // MongoDB connection string - MONGO_URL is for local dev,
 // MONGOLAB_URI is for the MongoLab add-on for Heroku deployment
