@@ -32,6 +32,19 @@ var UserSchema = new mongoose.Schema({
     },
     lastLogin: {
         type: Date
+    },
+    dob:{
+        type: String,
+        required: true 
+    },
+   
+    licence:{
+        type:String,
+        required:true
+    },
+    vehicleType:{
+        type:String,
+        
     }
 }, {
     timestamps: true
@@ -74,7 +87,7 @@ UserSchema.methods.sendAuthyToken = function(cb) {
 
     if (!self.authyId) {
         // Register this user if it's a new user
-        authy.register_user(self.email, self.smsmobile, self.countryCode,
+        authy.register_user(self.email, self.smsmobile, self.countryCode,self.licence,self.vehicleType,self.dob,
             function(err, response) {
 
                 if (err || !response.user) return cb.call(self, err);
