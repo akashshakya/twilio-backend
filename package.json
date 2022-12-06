@@ -22,16 +22,16 @@
     "voip"
   ],
   "dependencies": {
-    "authy": "^0.3.2",
+    "authy": "^1.4.0",
     "bcrypt": "^2.0.1",
-    "body-parser": "^1.12.0",
+    "body-parser": "^1.20.1",
     "dotenv": "^8.0.0",
-    "express": "^4.12.0",
+    "express": "^4.18.2",
     "jwt-simple": "^0.3.1",
     "mongoose": "^5.5.6",
     "morgan": "^1.5.1",
     "passport": "^0.3.0",
     "passport-jwt": "^1.2.1",
-    "twilio": "^1.11.1"
+    "twilio": "^3.83.4"
   }
 }
